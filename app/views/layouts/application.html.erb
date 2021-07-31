@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlogOnRailsAuthentication</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body>
+
+    <div class="login-div">
+      <% if user_signed_in? %>
+        Hello <%= current_user.name %>,
+          <%= link_to "Logout" , sessions_path, method: :delete, data: {confirm: "are you sure you want to log out?" }%>
+            <% else %>
+              <%= link_to "Login" , new_sessions_path %> |
+                <%= link_to "Sign Up" , new_user_path %>
+                  <% end %>
+    </div>
+
+    <div class="nav-links">
+      <%= link_to "Blog Index" , posts_path %> |
+        <%= link_to "New Post" , new_post_path %>
+    </div>
+    <hr>
+
+    <%= yield %>
+  </body>
+</html>

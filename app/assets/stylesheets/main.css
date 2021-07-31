@@ -1,0 +1,30 @@
+.login-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.signin-div {
+    padding: 10px;
+}
+
+.new-div {
+    padding: 10px;
+}
+
+.show-div {
+    padding: 10px;
+}
+
+.edit-div {
+    padding: 10px;
+}
+
+.signup-div {
+    padding: 10px;
+}

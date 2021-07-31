@@ -1,0 +1,12 @@
+<h1>This is the edit page</h1>
+<hr>
+
+<div class="edit-div">
+<%= form_for(@post) do |f| %>
+<%= f.label :title %> <br>
+<%= f.text_field :title, :placeholder => "Title" %> <br> <br>
+<%= f.label :body %> <br>
+<%= f.text_area :body, :placeholder => "Your blog" %> <br> <br>
+<%= f.submit "Edit Post", :class => "btn btn-primary" %>
+<% end %>
+</div>
